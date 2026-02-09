@@ -25,7 +25,7 @@ function findRegex(files, regex) {
     return emitter;
 }
 
-findRegex(["fileA.txt", "fileB.json"], /hello [\w.]+/)
+findRegex(["../fileA.txt", "../fileB.json"], /hello [\w.]+/)
     .on("fileread", file => console.log(`${file} was read`))
     .on("found", (file, match) => console.log(`Matched "${match}" in ${file}`))
     .on("error", err => console.error(`Error emitted: ${err.message}`));

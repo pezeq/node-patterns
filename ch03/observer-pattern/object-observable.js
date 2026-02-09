@@ -66,8 +66,8 @@ class FindRegex extends EventEmitter {
 
 const findRegexAsync = FindRegex
     .create(/hello [\w.]+/)
-    .addFile("fileA.txt")
-    .addFile("fileB.json")
+    .addFile("../fileA.txt")
+    .addFile("../fileB.json")
     .findAsync()
     .on("found", (file, match) => console.log(`[Async] Match "${match}" found on ${file}`))
     .on("error", (err) => console.log(`[Async] Error reading ${file}: ${err.message}`))
@@ -75,8 +75,8 @@ const findRegexAsync = FindRegex
 
 const findRegexSync = FindRegex
     .create(/hello [\w.]+/)
-    .addFile("fileA.txt")
-    .addFile("fileB.json")
+    .addFile("../fileA.txt")
+    .addFile("../fileB.json")
     .on("found", (file, match) => console.log(`[Before][Sync] Match "${match}" found on ${file}`))
     .findSync()
     .on("found", (file, match) => console.log(`[After][Sync] Match "${match}" found on ${file}`))
