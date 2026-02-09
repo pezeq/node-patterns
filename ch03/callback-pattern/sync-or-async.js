@@ -4,7 +4,6 @@ import { readFileSync } from "node:fs";
 /**
  * Mixed Async/Sync
  */
-
 const cache = new Map();
 
 function inconsistentRead(filename, callback) {
@@ -35,7 +34,7 @@ function createFileReader(filename) {
 }
 
 /**
- * Full Sync.
+ * Full Sync
  */
 const cacheSync = new Map();
 
@@ -103,7 +102,6 @@ function createFileReaderAsync(filename) {
 /**
  * Testing
  */
-
 const reader1 = createFileReaderAsync("data.txt");
 reader1.onDataReady(data => {
     console.log(`First call data: ${data}`)
