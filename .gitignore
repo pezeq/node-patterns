@@ -1,3 +1,5 @@
 .zed
 _server
-ch04/01-web-spider/node_modules
+ch04/node_modules
+ch04/01-web-spider/www.nodejsdesignpatterns.com
+ch04/02-web-spider-callback-discipline/www.nodejsdesignpatterns.com
